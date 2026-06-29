@@ -8,3 +8,6 @@ playwright-report
 test-results
 .vite
 *.log
+
+# internal spec — keep local, not public
+PROMPT-PORTFOLIO.md
