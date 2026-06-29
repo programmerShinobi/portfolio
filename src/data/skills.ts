@@ -2,6 +2,7 @@ import type { I18nText, RichText } from '@/lib/richText';
 
 export interface SkillAxis {
   axis: I18nText;
+  short: I18nText; // concise label used on the radar chart (full name stays in the table)
   level: number; // 0-100, self-assessed
   label: RichText;
   evidence: string[];
@@ -11,6 +12,7 @@ export interface SkillAxis {
 export const skills: SkillAxis[] = [
   {
     axis: { en: 'Backend Engineering', id: 'Backend Engineering' },
+    short: { en: 'Backend', id: 'Backend' },
     level: 90,
     label: {
       en: {
@@ -26,6 +28,7 @@ export const skills: SkillAxis[] = [
   },
   {
     axis: { en: 'Database & Data', id: 'Database & Data' },
+    short: { en: 'Data', id: 'Data' },
     level: 88,
     label: {
       en: {
@@ -41,6 +44,7 @@ export const skills: SkillAxis[] = [
   },
   {
     axis: { en: 'System Integration', id: 'Integrasi Sistem' },
+    short: { en: 'Integration', id: 'Integrasi' },
     level: 85,
     label: {
       en: {
@@ -56,6 +60,7 @@ export const skills: SkillAxis[] = [
   },
   {
     axis: { en: 'Security & Remediation', id: 'Keamanan & Remediasi' },
+    short: { en: 'Security', id: 'Keamanan' },
     level: 78,
     label: {
       en: {
@@ -71,6 +76,7 @@ export const skills: SkillAxis[] = [
   },
   {
     axis: { en: 'Legacy Modernization', id: 'Modernisasi Legacy' },
+    short: { en: 'Modernization', id: 'Modernisasi' },
     level: 82,
     label: {
       en: {
@@ -86,6 +92,7 @@ export const skills: SkillAxis[] = [
   },
   {
     axis: { en: 'API Design', id: 'Desain API' },
+    short: { en: 'API', id: 'API' },
     level: 80,
     label: {
       en: {
@@ -101,6 +108,7 @@ export const skills: SkillAxis[] = [
   },
   {
     axis: { en: 'Frontend', id: 'Frontend' },
+    short: { en: 'Frontend', id: 'Frontend' },
     level: 70,
     label: {
       en: {
@@ -116,6 +124,7 @@ export const skills: SkillAxis[] = [
   },
   {
     axis: { en: 'DevOps & Delivery', id: 'DevOps & Delivery' },
+    short: { en: 'DevOps', id: 'DevOps' },
     level: 68,
     label: {
       en: {

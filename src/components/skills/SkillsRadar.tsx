@@ -14,12 +14,14 @@ import { useI18n } from '@/hooks/usePreferences';
  */
 export function SkillsRadar() {
   const i18n = useI18n();
-  const data = skills.map((s) => ({ axis: i18n(s.axis), level: s.level }));
+  // Use concise labels on the chart so they don't clip on small screens
+  // (full names live in the accessible table beside the chart).
+  const data = skills.map((s) => ({ axis: i18n(s.short), level: s.level }));
 
   return (
-    <div className="h-[360px] w-full sm:h-[420px]" aria-hidden="true">
+    <div className="h-[340px] w-full sm:h-[420px]" aria-hidden="true">
       <ResponsiveContainer width="100%" height="100%">
-        <RadarChart data={data} outerRadius="72%">
+        <RadarChart data={data} outerRadius="70%" margin={{ top: 8, right: 24, bottom: 8, left: 24 }}>
           <PolarGrid stroke="currentColor" className="text-slate-300 dark:text-slate-700" />
           <PolarAngleAxis
             dataKey="axis"

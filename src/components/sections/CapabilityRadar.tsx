@@ -25,8 +25,8 @@ export function CapabilityRadar() {
         </Suspense>
 
         {/* Accessible text equivalent of the chart. */}
-        <div>
-          <table className="w-full text-left text-sm">
+        <div className="-mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
+          <table className="w-full min-w-[20rem] text-left text-sm">
             <caption className="sr-only">{i18n(ui.radarTableCaption)}</caption>
             <thead className="mono text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400">
               <tr className="border-b border-slate-200 dark:border-slate-800">
