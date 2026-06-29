@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/portfolio/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faqih Pratama Muhti — Software Engineer</title>
+    <meta
+      name="description"
+      content="Software Engineer focused on backend systems, legacy modernization, integration, and architectural clarity."
+    />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Faqih Pratama Muhti — Software Engineer" />
+    <meta
+      property="og:description"
+      content="I help complex systems become clearer, safer, more connected, and more ready to grow."
+    />
+    <meta property="og:image" content="https://programmershinobi.github.io/portfolio/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Anti-FOUC: apply persisted theme + language before the bundle loads. -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.classList.toggle('dark', t === 'dark');
+          var l = localStorage.getItem('lang');
+          if (l !== 'en' && l !== 'id') {
+            l = (navigator.language || 'en').toLowerCase().indexOf('id') === 0 ? 'id' : 'en';
+          }
+          document.documentElement.setAttribute('lang', l);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
