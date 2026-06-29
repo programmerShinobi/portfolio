@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-// Requires `npx playwright install` (browsers). Not run in the default CI job.
+// Runs in CI on PRs via .github/workflows/e2e.yml; locally needs `npx playwright install`.
 
 test('home renders and navigates to a case study, deep-link does not 404', async ({ page }) => {
   await page.goto('/');

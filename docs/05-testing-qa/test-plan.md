@@ -17,8 +17,10 @@
 - Deep-link / refresh of `/case-studies/ahi` does not 404 (SPA fallback).
 - All three toggles change state and persist across reload.
 
-> Running E2E requires `npx playwright install` (downloads browsers); it is not
-> run in the default CI job to keep CI lightweight.
+> E2E runs in its own workflow (`.github/workflows/e2e.yml`) on pull requests and
+> via manual dispatch — it installs Chromium and runs Playwright there. The default
+> CI job (`ci.yml`) stays lightweight (lint + typecheck + unit + build). Locally,
+> run `npm run e2e` (requires `npx playwright install` once).
 
 ## Accessibility (axe)
 
